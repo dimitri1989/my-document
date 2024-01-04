@@ -18,7 +18,7 @@ const Form = ({userInfo}) => {
   return (
     <div className='w-100 d-flex justify-content-center'>
         <form className='w-50 mt-3' onSubmit={saveUserHandler}>
-  <div className="mb-3">
+  <div className="mb-2">
     <label for="exampleInputEmail1" className="form-label">Email address</label>
     <input type="email" className="form-control" id="exampleInputEmail1" value={userEmail.username} onChange={(e)=>onchangehandler(e,'username')} aria-describedby="emailHelp"/>
     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
