@@ -14,7 +14,7 @@ const Form = ({ userInfo }) => {
 
   function onchangehandler(event, name) {
     if(!userEmail.username.match(validRegexEmail)){
-      console.log("ar udris udris")
+      console.log("ar udris udriss")
       setBorderDanger("form-control border border-danger")
     }else{
       setBorderDanger("form-control border border-success")
