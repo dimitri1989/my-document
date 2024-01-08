@@ -1,18 +1,22 @@
-import Form from './Form';
-import './App.css';
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Form from './Form';
+import Main from './Main';
+import './App.css';
+
 
 function App() {
-  var [userInfo,setUserInfo]= useState([])
-  function submitHandler(text){
-    setUserInfo([...userInfo,{...text}])
-    console.log(userInfo);
-    console.log(text);
-  }
+  // function submitHandler(text){
+  //   setUserInfo([...userInfo,{...text}])
   return (
-    <div className="App">
-     <Form userInfo={submitHandler} />
-    </div>
+
+    <BrowserRouter>
+  <Routes>
+    <Route path='/' element={<Form/>} />
+    <Route path='/main' element={<Main/>} />
+  </Routes>
+  </BrowserRouter>
+    
   );
 }
 
